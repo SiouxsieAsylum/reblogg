@@ -1,4 +1,11 @@
-<%= render 'shared/toolbar' %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New User</title>
+</head>
+<body>
+
+  <%= render 'shared/toolbar' %>
 <h2> Create an account </h2>
 
 <%= form_for @user do |form| %>
@@ -20,4 +27,9 @@
 <% end %>
 
 <br>
-Returning user? <%= link_to 'Sign in', new_session_path %>
+<p>Returning user? <%= link_to 'Sign in', new_session_path %> </p>
+
+
+</body>
+</html>
+

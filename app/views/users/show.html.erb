@@ -1,6 +1,16 @@
-<%= render 'shared/toolbar' %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @user.username %></title>
+</head>
+<body>
+  <%= render 'shared/toolbar' %>
 <h1><%= @user.username %></h1><%= link_to 'posts', posts_path %>
 
 <br>
 
 <%= link_to 'all users', users_path %>
+</body>
+</html>
+
+

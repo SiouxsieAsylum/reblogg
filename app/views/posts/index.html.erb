@@ -1,5 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @user.username %>'s posts</title>
+</head>
+<body>
 <%= render 'shared/toolbar' %>
-<h1><%= current_user.username %></h1>
+<h1><%= @user.username %></h1>
 
 <% @posts.reverse_each do |post|%>
   <%=post.body %>
@@ -10,3 +16,8 @@
 <% end %>
 
 <%= link_to 'new', new_post_path %>
+</body>
+</html>
+
+
+
