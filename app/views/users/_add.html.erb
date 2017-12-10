@@ -1,4 +1,4 @@
 <%= form_for(current_user.is_following.build) do |f| %>
-  <div><%= hidden_field_tag :followed_id, @user.id %></div>
+  <div><%= hidden_field_tag :followed_id, user.id %></div>
   <%= f.submit "+", class: "button" id="add" %>
 <% end %>

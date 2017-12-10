@@ -3,7 +3,10 @@
 
 <ul>
   <% @users.each do |user| %>
-    <li><%= link_to user.username, user_path(user) %> <%= link_to 'posts', posts_path %> <%= render 'follow' %></li>
+    <li><%= link_to user.username, user_path(user) %> <%= link_to 'posts', posts_path %>
+       <%= render 'follow', locals: {user: user} %>
+
+      </li>
   <% end %>
 </ul>
 

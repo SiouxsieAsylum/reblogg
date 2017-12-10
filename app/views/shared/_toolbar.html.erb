@@ -1,9 +1,9 @@
 <div id="toolbar">
-  <%
+
   <% if current_user %>
-    <%= link_to "Log Out", :controller=> "sessions", :action=> "destroy" %>
+    <%= link_to "Log Out", session_path, method: :delete %>
     <%= link_to "Profile", user_path(current_user) %>
   <% else %>
-    <%= link_to "Log In", new_session_path
+    <%= link_to "Log In", new_session_path %>
   <% end %>
 </div>

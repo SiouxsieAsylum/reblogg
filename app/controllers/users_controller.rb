@@ -23,13 +23,13 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-    @followers = Followship.where(follower_id: params[:id])
+    @followers = Followship.where(follower_id: current_user.id)
     following?
   end
 
   def show
     @user = User.find(params[:id])
-    @followers = Followship.where(follower_id: params[:id])
+    @followers = Followship.where(follower_id: current_user.id)
     following?
   end
 

@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :ensure_signed_in
-  # before_action :load_post, [:show, :edit, :update, :destroy]
+  before_action :load_post, [:show, :edit, :update, :destroy]
 
   def index
     @posts = current_user.posts
@@ -56,8 +56,8 @@ class PostsController < ApplicationController
     params.require(:post).permit(:body)
   end
 
-  # def load_post
-  #   @post = current_user.posts.find(params[:id])
-  # end
+  def load_post
+   @post = params[:id] ? current_user.posts.find(params[:id]) : 'No posts!'
+  end
 
 end

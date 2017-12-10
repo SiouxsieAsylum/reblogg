@@ -1,4 +1,6 @@
-<%= form_for(current_user.is_following.find_by(followed_id: @user.id),
+<% puts "hello" + "#{:user_person}" %>
+<%= form_for(current_user.is_following.find_by(followed_id: :user.id),
     html: { method: :delete }) do |f| %>
-  <%= f.submit "-", class: "button" id="subtract"%>
+
+  <%= f.submit "-", class: "button", id: "subtract" %>
 <% end %>

@@ -1,6 +1,8 @@
-<% unless current_user == (@user) %>
+
+<% unless current_user == locals[:user].id %>
+
   <div id="follow">
-  <% if current_user.following?(@user) %>
+  <% if following?(locals[:user]) %>
     <%= render 'add' %>
   <% else %>
     <%= render 'delete' %>
