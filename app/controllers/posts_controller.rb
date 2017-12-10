@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :ensure_signed_in
-  # before_action :load_post, [:show, :edit, :update, :destroy]
+  before_action :load_post, [:show, :edit, :update, :destroy]
 
   def index
     @posts = current_user.posts
@@ -53,7 +53,7 @@ class PostsController < ApplicationController
   end
 
   def load_post
-    # @post = current_user.posts.find(params[:id])
+    @post = current_user.posts.find(params[:id])
   end
 
 end
