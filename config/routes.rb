@@ -5,8 +5,8 @@ root to: 'sessions#new'
 
 resources :users, only: [:new, :create, :index, :show]
 
-resource :session only: [:new, :create, :destroy]
+resource :session, only: [:new, :create, :destroy]
 
-resources :monsters
+resources :posts
 
 end
