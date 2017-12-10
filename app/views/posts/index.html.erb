@@ -1,3 +1,12 @@
-<% @posts.each do |post|%>
+<%= render 'shared/toolbar' %>
+<h1><%= current_user.username %></h1>
+
+<% @posts.reverse_each do |post|%>
   <%=post.body %>
 <% end %>
+
+<% @followers.each do |follower| %>
+  <%=follower.username %>
+<% end %>
+
+<%= link_to 'new', new_post_path %>

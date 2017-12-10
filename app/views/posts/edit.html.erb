@@ -1,6 +1,8 @@
+<%= render 'shared/toolbar' %>
+
 <h2>Edit Post</h2>
 
 <%= form_for @post do |form| %>
-  <%= form.text_feild :body %>
+  <%= form.text_field :body %>
   <%= submit_tag 'Update' %>
 <% end %>

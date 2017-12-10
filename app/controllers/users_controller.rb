@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
-    before_action :ensure_signed_out, only: [:new, :create]
+  before_action :ensure_signed_out, only: [:new, :create]
   before_action :ensure_signed_in, only: [:show, :index]
+
+  include UsersHelper
 
   def new
     @user = User.new
@@ -22,11 +24,13 @@ class UsersController < ApplicationController
   def index
     @users = User.all
     @followers = Followship.where(follower_id: params[:id])
+    following?
   end
 
   def show
     @user = User.find(params[:id])
     @followers = Followship.where(follower_id: params[:id])
+    following?
   end
 
   private

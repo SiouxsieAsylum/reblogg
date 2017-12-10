@@ -36,4 +36,5 @@ class ApplicationController < ActionController::Base
     flash[:error] = 'you are already signed in'
     redirect_to users_path
   end
+
 end

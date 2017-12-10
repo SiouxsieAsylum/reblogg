@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 root to: 'sessions#new'
 
 resources :users, only: [:new, :create, :index, :show] do
-  resources :followships, only:[:new, :create, :index, :destroy]
+  resources :followships, only:[:create, :destroy]
 end
 
 resource :session, only: [:new, :create, :destroy]
