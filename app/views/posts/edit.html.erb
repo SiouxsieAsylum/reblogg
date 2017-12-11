@@ -1,6 +1,17 @@
-<h2>Edit Post</h2>
+<% render "html" %>
 
-<%= form_for @post do |form| %>
-  <%= form.text_feild :body %>
-  <%= submit_tag 'Update' %>
-<% end %>
+  <title>Edit Post</title>
+</head>
+<body>
+  <h2>Edit Post</h2>
+  <%= form_for @post do |form| %>
+    <%= form.text_feild :body %>
+    <%= submit_tag 'Update' %>
+  <% end %>
+
+</body>
+</html>
+
+
+
+
