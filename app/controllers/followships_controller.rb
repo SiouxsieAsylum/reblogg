@@ -1,14 +1,22 @@
 class FollowshipsController < ApplicationController
-    def create
+  include UsersHelper
+
+  def create
     user = User.find(params[:followed_id])
-    current_user.add(user)
-    redirect_to user
+    followship_params
+    add(user)
   end
 
   def destroy
     user = Followship.find(params[:id]).followed
-    current_user.delete(user)
-    redirect_to user
+    followship_params
+    delete(user)
   end
-end
+
+  private
+
+  def followship_params
+    params.require(:post).permit(follower: current_user.id, :followed)
+  end
+
 end

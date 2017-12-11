@@ -33,6 +33,7 @@ class UsersController < ApplicationController
     following?
   end
 
+
   private
 
   def create_params

@@ -1,11 +1,15 @@
 
+
+<div id="follow-button">
 <% unless current_user == locals[:user].id %>
 
-  <div id="follow">
+  <!-- <div id="follow"> -->
   <% if following?(locals[:user]) %>
-    <%= render 'add' %>
+     <%= render 'delete', locals: {user: locals[:user]} %>
   <% else %>
-    <%= render 'delete' %>
-  <% end %>
-  </div>
+  <%= render 'add', locals: {user: locals[:user]} %>
+
+   <% end %>
+
 <% end %>
+</div>

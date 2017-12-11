@@ -8,8 +8,10 @@ class User < ApplicationRecord
   validates :password, length: PASSWORD_LENGTH, allow_nil: true
 
   has_many :posts, dependent: :destroy
+  # my doing
   has_many :is_following, class_name: "Followship", foreign_key: "follower_id", dependent: :destroy
   has_many :followed, class_name: "Followship", foreign_key: "followed_id", dependent: :destroy
+  # their doing
   has_many :following, through: :is_following, source: :followed
   has_many :was_followed, through: :followed, source: :follower
 
