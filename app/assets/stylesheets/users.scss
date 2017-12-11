@@ -27,3 +27,15 @@
 .link:hover{
   color:rgb(97,68,107);
 }
+
+.profile-picture{
+  height: 20vw;
+  width: 20vw;
+  background-color: grey;
+}
+
+.name-flex{
+  width: 30vw;
+  display: flex;
+  justify-content: space-between;
+}

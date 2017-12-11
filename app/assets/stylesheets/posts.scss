@@ -2,9 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#flex-protector{
-  padding:10vw;
-}
+
 
 .new-post,.index-post,.single-post{
   height:20vh;
@@ -22,7 +20,7 @@
   overflow: hidden;
 }
 
-.index-post{
+.index-post,.single-post{
   position: relative;
   top:0;
   padding:0;
@@ -79,6 +77,11 @@
 .post-submit{
   width:10vw;
   align-self: flex-end;
+}
+
+#post{
+  margin: 0;
+  padding: 0;
 }
 
 

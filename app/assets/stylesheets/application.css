@@ -111,3 +111,7 @@ input[type=submit]:hover{
   color:rgb(87,58,97);
   border:3px solid rgb(87,58,97);
 }
+
+.flex-protector{
+  padding:5vw;
+}

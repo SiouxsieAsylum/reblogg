@@ -7,6 +7,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @post = current_user.posts.find(params[:id])
   end
 
   def new
@@ -27,9 +28,11 @@ class PostsController < ApplicationController
   end
 
   def edit
+   @post = current_user.posts.find(params[:id])
   end
 
   def update
+    @post = current_user.posts.find(params[:id])
     if @post.update
       flash[:notice] = 'Updated!'
       redirect_to post_path
@@ -40,6 +43,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
+  @post = current_user.posts.find(params[:id])
     @post.destroy!
 
     flash[:notice] = "post deleted!"
@@ -50,10 +54,6 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:body)
-  end
-
-  def load_post
-    # @post = current_user.posts.find(params[:id])
   end
 
 end

@@ -2,9 +2,18 @@
   <title>Post</title>
 </head>
 <body>
-  <%= render "shared/toolbar" %>
-  <%= @post.body %>
 
+  <%= render "shared/toolbar" %>
+<div class="flex-protector" id="post">
+    <div class="single-post">
+      <div class="index-post-time">
+          Posted on <%= @post.created_at.strftime("%m-%d-%y") %>
+      </div>
+      <div class="content">
+          <%= @post.body %>
+      </div>
+    </div>
+</div>
 <%= render "shared/footer" %>
 
 

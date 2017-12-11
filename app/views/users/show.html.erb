@@ -1,15 +1,27 @@
 <% render "shared/html" %>
 
   <title><%= @user.username %></title>
+
 </head>
 <body>
-  <%= render "shared/toolbar" %>
-<h1><%= @user.username %></h1>
 
-<br>
+<%= render "shared/toolbar" %>
+<div class="flex-protector">
 
-<%= link_to 'all users', users_path %>
+<div class="name-flex">
+  <div class="profile-picture"></div>
+  <h1 class="name"><%= @user.username %></h1>
+</div>
 
+
+
+<%= link_to 'Home', users_path %>
+</div>
 <%= render "shared/footer" %>
+
+</body>
+</html>
+
+
 
 
