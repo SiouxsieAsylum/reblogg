@@ -1,9 +1,10 @@
-<% render "html" %>
+<% render "shared/html" %>
   <title>Post</title>
 </head>
 <body>
+  <%= render "shared/toolbar" %>
   <%= @post.body %>
-</body>
-</html>
+
+<%= render "shared/footer" %>
 
 

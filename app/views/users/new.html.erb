@@ -1,10 +1,10 @@
-<% render "html" %>
+<% render "shared/html" %>
 
   <title>Welcome!</title>
 </head>
 <body>
 <h2> Create an account </h2>
-
+<%= render "shared/toolbar" %>
 <%= form_for @user do |form| %>
   <%= form.text_field :username,
         placeholder: 'Username',
@@ -26,7 +26,6 @@
 <br>
 Returning user? <%= link_to 'Sign in', new_session_path %>
 
-</body>
-</html>
+<%= render "shared/footer" %>
 
 

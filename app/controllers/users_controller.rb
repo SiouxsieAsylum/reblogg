@@ -21,6 +21,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    @posts = current_user.posts ? current_user.posts : [];
   end
 
   def show

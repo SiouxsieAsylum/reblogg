@@ -1,10 +1,19 @@
-<div id="toolbar">
+<header>
+  <div id="overlay">
+  </div>
+</header>
+<div id="void"><h1>Void.shout()</h1></div>
 
+<div id="toolbar">
   <% if current_user %>
-    <p><%= current_user.username %></p>
-    <%= link_to "Log Out", session_path, method: :delete %>
+    <div id="toolbar-left">
+      <%= link_to current_user.username, user_path(current_user) %>
+    </div>
+    <div id="toolbar-right"><%= link_to "Log Out", session_path, method: :delete %>
     <%= link_to "Profile", user_path(current_user) %>
+    </div>
   <% else %>
-    <%= link_to "Log In", new_session_path %>
+    <div class="not-logged-in" id="toolbar-right"><%= link_to "Log In", new_session_path %></div>
   <% end %>
 </div>
+<div class="blog-container">

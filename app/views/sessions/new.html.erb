@@ -1,7 +1,9 @@
-<% render "html" %>
-  <title></title>
+<% render "shared/html" %>
+  <title>Create User</title>
 </head>
 <body>
+  <%= render "shared/toolbar" %>
+
   <%= form_for :user, url: session_path do |form| %>
   <%= form.text_field :username, placeholder: 'Username', required: true %>
   <%= form.password_field :password, placeholder: 'password', required: true %>
@@ -15,5 +17,6 @@ New user? <%= link_to 'Create an account', new_user_path %>
 </html>
 
 <h2> Sign in! </h2>
+<%= render "shared/footer" %>
 
 

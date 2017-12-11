@@ -1,17 +1,21 @@
-<% render "html" %>
+<% render "shared/html" %>
 
   <title>New Post</title>
 </head>
 <body>
+  <%= render "shared/toolbar" %>
+  <div id="flex-protector">
   <h2>Create new Post</h2>
 
-<%= form_for @post do |form| %>
+<%= form_for @post, :html=>{class: "new-post"} do |form| %>
   <%= form.text_field :body,
-    placeholder: "What do you have to say?"
+    placeholder: "What do you have to say?",
+    class: "post-input"
+
     %>
-  <%= submit_tag 'Tell the world!' %>
+  <%= submit_tag 'Tell the world!', class: "post-submit" %>
 <% end %>
-</body>
-</html>
+<div>
+<%= render "shared/footer" %>
 
 

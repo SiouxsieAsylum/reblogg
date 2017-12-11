@@ -1,3 +1,84 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#flex-protector{
+  padding:10vw;
+}
+
+.new-post,.index-post,.single-post{
+  height:20vh;
+  width: 60vw;
+  margin-top: 3vh;
+  padding:2vh;
+  border-radius: 2vh;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-end;
+  justify-content: space-between;
+  background-color: rgb(255,255,255);
+  // border: 1px solid rgb(157,175,196);
+  box-shadow: 1px 1px 7px rgb(157,175,196);
+  overflow: hidden;
+}
+
+.index-post{
+  position: relative;
+  top:0;
+  padding:0;
+  justify-content: flex-start;
+  align-self: center;
+  margin: 0 auto;
+  margin-bottom: 10vh;
+}
+
+.single-post{
+  height:60vh;
+}
+
+#feed ul{
+  width:80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  flex-wrap: wrap;
+
+}
+
+.index-post-time{
+  // line-height: 0;
+  text-align: right;
+  padding-right:3vw;
+  border-radius: 2vh 2vh 0 0;
+  height:3vh;
+  width:inherit;
+  font-size: 2vh;
+  color:rgb(242,250,255);
+  background-color: rgb(97,68,107);
+   // margin-top: -1vh;
+}
+
+.content{
+  // background-color: red;
+  position: relative;
+  padding: 1vh;
+}
+
+.post-input{
+  align-self: center;
+  width: 50vw;
+  padding:1vh;
+  outline-color: rgb(146,129,168);
+  transition:0.1s;
+}
+
+.post-input:hover{
+  background-color: rgb(229,233,255);
+}
+
+.post-submit{
+  width:10vw;
+  align-self: flex-end;
+}
+
+

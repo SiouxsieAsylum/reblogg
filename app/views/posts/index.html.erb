@@ -1,12 +1,13 @@
-<% render "html" %>
+<% render "shared/html" %>
 
   <title>Reblogg</title>
 </head>
 <body>
+  <%= render "shared/toolbar" %>
   <% @posts.each do |post|%>
     <%=post.body %>
   <% end %>
-</body>
-</html>
+
+<%= render "shared/footer" %>
 
 

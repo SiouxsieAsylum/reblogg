@@ -19,7 +19,7 @@ class PostsController < ApplicationController
 
     if @post.save
       flash[:notice] = 'Posted!'
-      redirect_to posts_path
+      redirect_to users_path
     else
       flash[:error] = @post.errors.full_messages.join(', ')
       render :new

@@ -1,16 +1,16 @@
-<% render "html" %>
+<% render "shared/html" %>
 
   <title>Edit Post</title>
 </head>
 <body>
+  <%= render "shared/toolbar" %>
   <h2>Edit Post</h2>
   <%= form_for @post do |form| %>
     <%= form.text_feild :body %>
     <%= submit_tag 'Update' %>
   <% end %>
 
-</body>
-</html>
+<%= render "shared/footer" %>
 
 
 
