@@ -32,6 +32,8 @@
 
 .single-post{
   height:60vh;
+  align-self:flex-start;
+  margin-left: 20vw;
 }
 
 #feed ul{
@@ -82,6 +84,7 @@
 #post{
   margin: 0;
   padding: 0;
+  display:flex;
 }
 
 
